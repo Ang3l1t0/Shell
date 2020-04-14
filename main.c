@@ -1,4 +1,4 @@
-#include "shell.h"
+#include "sh.h"
 /**
  * signalHandler - It handles the interruption signal.
  * @val: Set to ignore signals.
