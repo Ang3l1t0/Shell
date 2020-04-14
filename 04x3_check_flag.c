@@ -3,7 +3,7 @@
  * check_flag - Used for print error messages.
  * @flag: Receives the flag that identifies the error process.
  * @shell_name: Receives the current shell name.
- * @command: Receives the executed command.
+ * @com: Receives the executed command.
  * @count: Receives the current number that have the counter of commands.
  *
  * Return: It returns nothing.
