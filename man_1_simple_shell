@@ -1,0 +1,25 @@
+.\" Manpage for Simple Shell.
+.\" Contact angel.palma@holbertonschool.com or juliana.chois@holbertonschool.com to correct errors or typos.
+.TH man 1 "Apr 14 2020" "1.0" "Simple Shell Man Page"
+.SH NAME
+simple_shell - This simple shell project is a program that can be compiled and launched from the command line. It contains the most basic features and functions of a shell program.
+.SH SYNOPSIS
+$ <command> <flags or options> <argument 1> <argument 2> ...
+
+.SH DESCRIPTION
+This program is capable to execute the most basic functions of a shell program, you can run ls -a command for example, pwd, env etc.
+
+.SS Overview
+The simple_shell is a command that reads lines from either a file or the terminal, interprets them, and generally executes other commands.  It is the program that is running when the user runs gcc -Wall -Werror -Wextra -pedantic *.c -o hsh and runs the executable file, ./hsh. The simple_shell implements a language that has flow control constructs, a macro facility that provides a variety of features in addition to data storage, along with built in history and line editing capabilities.  It incorporates many features to aid interactive use and has the advantage that the interpretative language is common to both interactive and non-interactive use (shell scripts).  That is, commands can be typed directly to the running shell or can be put into a file and the file can be executed directly by the shell.
+
+.SS Simple Commands
+ If a simple command has been recognized, the shell performs the following actions:
+
+ 1.   Leading words of the form “name=value” are stripped off and assigned to the environment of the simple command.  Redirection operators and their arguments (as described below) are stripped off and saved for processing.
+
+ 2.   The remaining words are expanded as described in the section called “Expansions”, and the first remaining word is considered the command name and the command is located.  The remaining words are considered the arguments of the command.  If no command name resulted, then the “name=value” variable assignments recognized in item 1 affect the current shell.
+
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+(Angel Palma) angel.palma@holbertonschool.com and (Juliana Chois) juliana.chois@holbertonschool.com
