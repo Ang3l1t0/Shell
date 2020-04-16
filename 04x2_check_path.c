@@ -18,7 +18,7 @@ int check_for_path(char **av, int count, char *shell_name)
 	prcs = find_fpth(*av);
 	if (prcs != 0)
 	{
-		if (prcs == 2)
+		if (prcs == 126)
 			return (prcs); /* if prcs is equals to 2 the use do not have permissions. */
 		prcs = find_fname(*av);
 		if (prcs != 0)
@@ -38,17 +38,18 @@ int check_for_path(char **av, int count, char *shell_name)
 				if (flag != 0)
 					check_flag(flag, shell_name, av[0], count);
 			}
-			exit(99);
+			exit(0);
 		}
 		else
 		{
 			wait(&status);
-			if (status < 0)
+			if (WEXITSTATUS(status) != 0)
 				return (-1);
 			return (0);
 		}
 	}
 
 	_perror(shell_name, av[0], "Error with creation subprocess\n", count);
-	return (-3);
+	return (1);
 }
+
