@@ -15,23 +15,23 @@
 /*VARIABLE*/
 extern char **environ;
 
-/*STRUCTURE*/
-/**
- * struct dirs - It's a structure whose function
- *                      is get directories names.
- * @directory: Directory name.
- * @next: Next node to traverse.
- */
-typedef struct dirs
-{
-
-	char *directory;
-	struct dirs *next;
-
-} dir;
-
 /* MACROS */
 #define DELIM " \n\t\r\a\""
+#define ANALYZER(pos1, pos2) ((pos1 == '.' && pos2 == '/') \
+				|| (pos1 == '/') || (pos1 == '.' && pos2 == '.'))
+		
+/*STRUCTURE*/
+/**
+   * struct dirs - It's a structure whose function
+    *                      is get directories names.
+	 * @directory: Directory name.
+	  * @next: Next node to traverse.
+	   */
+typedef struct dirs
+{
+		char *directory;
+			struct dirs *next;
+} dir;
 
 /*----PROTOTYPES----*/
 
@@ -52,7 +52,7 @@ void print_integer(int integer);
 void *_calloc(unsigned int nmemb, unsigned int size);
 
 /*com FINDERS*/
-void recognize_command(char *com, int count, char *shell_name);
+int recognize_command(char *com, int count, char *shell_name);
 int check_for_path(char **av, int count, char *shell_name);
 void check_flag(int flag, char *shell_name, char *com, int count);
 int find_fpth(char *com);
@@ -72,3 +72,4 @@ void signalHandler(int value);
 char *_getenv(char *variable);
 
 #endif /* _SHELL_ */
+
