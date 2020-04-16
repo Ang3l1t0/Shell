@@ -1,13 +1,13 @@
 # :computer: :shell: Simple Shell
 
-## :page_with_curl: escription
------
+## :page_with_curl: Description
+
 This simple shell project is a program that can be compiled and launched from the command line. It contains the most basic features and functions of a shell program.
 This program is capable to execute the most basic functions of a shell program, you can run ls -a command for example, pwd, env etc.
 It can recognize a command no matter if it has spaces or not : "ls        -a".
 
 ## :runner: Quick Start
------
+
 1. Clone this repository to your local directory.
 
     Using ssh: ```$ git@github.com:Ang3l1t0/simple_shell.git```
@@ -28,7 +28,7 @@ It can recognize a command no matter if it has spaces or not : "ls        -a".
     ```
     
 ## Syntax
------
+
 You can use the same syntax of any other shell:
   ```
   $ <command> <flags or options> <argument 1> <argument 2> ...
