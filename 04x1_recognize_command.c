@@ -5,18 +5,17 @@
  * @com: The current command with its arguments.
  * @count: Receives the current number that have the counter of commands.
  * @shell_name: Receives the current shell name.
- *
  * Return: It returns nothing.
  */
 
-void recognize_command(char *com, int count, char *shell_name)
+int recognize_command(char *com, int count, char *shell_name)
 {
-	int status, traveler;
+	int status, traveler, rtn = 0;
 	char *av[1024] = {NULL};
 	char cmd[1024] = {'\0'};
 
 	if (!com || *com == '\n')
-		return;
+		return (0);
 
 	/*Travels through command parameter until*/
 	/*There are not spaces in it*/
@@ -30,23 +29,22 @@ void recognize_command(char *com, int count, char *shell_name)
 
 	while (av[traveler++])
 		av[traveler] = strtok(NULL, DELIM);
+	if (!(*av)) /* Check if the given command is NULL after the split */
+		return (0);
+	if ((_strcmp(*av, "exit")) == 0)
+		return (1);
 
 	status = check_for_path(av, count, shell_name);
 
 	if (status != 0)
 	{
-		if (status == 1)
-		{
-			_perror(shell_name, av[0], "not found\n", count);
-			return;
-		}
-		if (status == -1)
-		{
-			_perror(shell_name, av[0], "has occured an error\n", count);
-			return;
-		}
-		if (status == 2)
-			check_flag(status, shell_name, av[0], count);
+		if (status == 127)
+			check_flag(3,shell_name, av[0], count), rtn = 127;
+		else if (status == -1)
+			rtn = 2;
+		else if (status == 126)
+			check_flag(2, shell_name, av[0], count), rtn = 126;
 	}
+	return (rtn);
 }
 
