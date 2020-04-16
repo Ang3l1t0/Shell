@@ -84,3 +84,11 @@ Non interactive way:
 | generate-authors.sh | Bash script to generate the `AUTHORS` |
 | man_1_simple_shell | Manual page for our simple shell |
 | sh.h | Shell header file |
+
+
+## Authors
+
+- Angel Palma - [Github](https://github.com/Ang3l1t0) , [Twitter](https://twitter.com/Ang3lp)
+- Juliana Chois - [Github](https://github.com/julianachois) , [Twitter](https://twitter.com/julianachois)
+
+See also the list of [contributors](https://github.com/Ang3l1t0/simple_shell/graphs/contributors) who participated in this project.
