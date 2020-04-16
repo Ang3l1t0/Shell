@@ -1,12 +1,12 @@
-# Simple Shell
+# :computer: :shell: Simple Shell
 
-## Description
+## :page_with_curl: escription
 -----
 This simple shell project is a program that can be compiled and launched from the command line. It contains the most basic features and functions of a shell program.
 This program is capable to execute the most basic functions of a shell program, you can run ls -a command for example, pwd, env etc.
 It can recognize a command no matter if it has spaces or not : "ls        -a".
 
-## Quick Start
+## :runner: Quick Start
 -----
 1. Clone this repository to your local directory.
 
@@ -38,7 +38,7 @@ Non interactive way:
   $ <command> | ./hsh
   ```
 
-### Examples
+### :memo: Examples
 Interactive way: 
   ```
   $ /bin/ls
@@ -53,7 +53,7 @@ Non interactive way:
   ```
   $ echo "ls -l" | ./hsh
   ```
-## Files
+## :file_folder: Files
 
 | File Name | Description |
 | --- | --- |
@@ -86,7 +86,7 @@ Non interactive way:
 | sh.h | Shell header file |
 
 
-## Authors
+## :black_nib: Authors
 
 - Angel Palma - [Github](https://github.com/Ang3l1t0) , [Twitter](https://twitter.com/Ang3lp)
 - Juliana Chois - [Github](https://github.com/julianachois) , [Twitter](https://twitter.com/julianachois)
