@@ -92,6 +92,7 @@ Non interactive way:
 | sh.h | Shell header file |
 
 ## :pencil: Version
+- 0.1.0
 
 ## :black_nib: Authors
 
