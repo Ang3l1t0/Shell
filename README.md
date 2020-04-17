@@ -26,7 +26,13 @@ It can recognize a command no matter if it has spaces or not : "ls        -a".
     ```
     $ 
     ```
-    
+
+## :warning: Requirements    
+
+- This shell is designed to run in the `Ubuntu 14.04 LTS` linux environment and functions will be compiled with `gcc 4.8.4` using the flags  `-Wall -Werror -Wextra and -pedantic`.
+- The shell should not have any memory leaks.
+- Your code should use the `Betty`
+
 ## Syntax
 
 You can use the same syntax of any other shell:
@@ -85,6 +91,7 @@ Non interactive way:
 | man_1_simple_shell | Manual page for our simple shell |
 | sh.h | Shell header file |
 
+## :pencil: Version
 
 ## :black_nib: Authors
 
@@ -92,3 +99,7 @@ Non interactive way:
 - Juliana Chois - [Github](https://github.com/julianachois) , [Twitter](https://twitter.com/julianachois)
 
 See also the list of [contributors](https://github.com/Ang3l1t0/simple_shell/graphs/contributors) who participated in this project.
+
+## :triangular_flag_on_post: Acknowledgments
+
+- Holberton School, we would like to thank the staff and our peers for helping us in this great experience.
