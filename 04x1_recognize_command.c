@@ -39,7 +39,7 @@ int recognize_command(char *com, int count, char *shell_name)
 	if (status != 0)
 	{
 		if (status == 127)
-			check_flag(3,shell_name, av[0], count), rtn = 127;
+			check_flag(3, shell_name, av[0], count), rtn = 127;
 		else if (status == -1)
 			rtn = 2;
 		else if (status == 126)
@@ -47,4 +47,3 @@ int recognize_command(char *com, int count, char *shell_name)
 	}
 	return (rtn);
 }
-
