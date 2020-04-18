@@ -19,7 +19,6 @@ extern char **environ;
 #define DELIM " \n\t\r\a\""
 #define ANALYZER(pos1, pos2) ((pos1 == '.' && pos2 == '/') \
 				|| (pos1 == '/') || (pos1 == '.' && pos2 == '.'))
-		
 /*STRUCTURE*/
 /**
    * struct dirs - It's a structure whose function
